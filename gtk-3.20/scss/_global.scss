@@ -3,12 +3,12 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #fbf1c7, #282828);
-$fg_color: if($variant == "dark", #282828, #fbf1c7);
-$base_color: if($variant == "dark", #ebdbb2, #3c3836);
-$text_color: if($variant == "dark", #3c3836, #ebdbb2);
-$button_bg_color: if($variant == "dark", #ebdbb2, #3c3836);
-$button_fg_color: if($variant == "dark", #3c3836, #ebdbb2);
+$bg_color: if($variant == "light", #fbf1c7, #282828);
+$fg_color: if($variant == "light", #282828, #fbf1c7);
+$base_color: if($variant == "light", #ebdbb2, #3c3836);
+$text_color: if($variant == "light", #3c3836, #ebdbb2);
+$button_bg_color: if($variant == "light", #ebdbb2, #3c3836);
+$button_fg_color: if($variant == "light", #3c3836, #ebdbb2);
 $header_button_bg_color: #282828;
 $header_button_fg_color: #ebdbb2;
 $selected_bg_color: #83a598;
@@ -18,9 +18,9 @@ $tooltip_fg_color: #fbf1c7;
 
 /*$selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));*/
 /*$borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));*/
-$selected_borders_color: if($variant == 'light', mix($selected_bg_color, $fg_color, .3), darken($selected_bg_color, 20%));
-$borders_color: if($variant == 'light', mix($bg_color, $fg_color, .08), shade($bg_color, .88));
-$borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+$selected_borders_color: if($variant == 'dark', mix($selected_bg_color, $fg_color, .3), darken($selected_bg_color, 20%));
+$borders_color: if($variant == 'dark', mix($bg_color, $fg_color, .08), shade($bg_color, .88));
+$borders_edge: if($variant == 'dark', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
 $dark_bg_color: #1d2021;
@@ -47,10 +47,10 @@ $button_border_strength: 0.1;
 $button_border: alpha($button_fg_color, .06 + $button_border_strength);
 $entry_border: $borders_color;
 
-$scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
+$scrollbar_bg_color: if($variant == 'dark', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
 $scrollbar_slider_color: mix($bg_color, $fg_color, .5);
 $scrollbar_slider_hover_color: mix($bg_color, $fg_color, .7);
-$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 5%), lighten($selected_bg_color, 10%));
+$scrollbar_slider_active_color: if($variant == 'dark', darken($selected_bg_color, 5%), lighten($selected_bg_color, 10%));
 
 $switch_disabled_bg_color: mix($bg_color, $base_color, .5);
 $switch_disabled_border_color: $bg_color;
@@ -119,11 +119,11 @@ $insensitive_bg_color: mix($bg_color, $base_color, .6);
 $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: if($variant == 'light', darken($base_color, .01), lighten($base_color, .01));
+$backdrop_base_color: if($variant == 'dark', darken($base_color, .01), lighten($base_color, .01));
 $backdrop_text_color: mix($backdrop_base_color, $text_color, .8);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, .5);
-$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
+$backdrop_insensitive_color: if($variant == 'dark', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
 $backdrop_selected_bg_color: $selected_bg_color;
 $backdrop_selected_fg_color: mix($selected_bg_color, $selected_fg_color, .66);
 $backdrop_borders_color: mix($bg_color, $borders_color, .9);
@@ -137,7 +137,7 @@ $backdrop_osd_fg: mix($osd_fg, $backdrop_osd_base, .5);
 $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, .4);
 
-$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, .2));
+$backdrop_menu_color: if($variant == 'dark', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, .2));
 
 $drop_target_color: #4e9a06;
 
